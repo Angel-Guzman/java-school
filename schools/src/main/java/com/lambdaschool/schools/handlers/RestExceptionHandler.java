@@ -63,7 +63,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler
         errorDetail.setTimestamp(new Date());
         errorDetail.setStatus(status.value());
         errorDetail.setTitle("Rest Internal Exception");
-        errorDetail.setDetail(ex.getMessage());
+        errorDetail.setDetail("Found an issue with School: " + ex.getMessage());
         errorDetail.setDeveloperMessage(ex.getClass().getName());
         errorDetail.setErrors(helper.getConstraintViolation(ex));
 
